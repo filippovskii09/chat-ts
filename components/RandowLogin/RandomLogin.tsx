@@ -3,11 +3,7 @@
 import { useState } from "react"
 import { v4 as uuid } from 'uuid';
 import styles from './RandomLogin.module.scss'
-
-type User = {
-	name: string,
-	id: string
-}
+import { User } from "../../common/hooks/useAllUsers";
 
 const RandomLogin = () => {
 	
@@ -24,7 +20,6 @@ const RandomLogin = () => {
 
 		setUser({name: randomName, id: uuid()})
 		localStorage.setItem('user', JSON.stringify(user))
-
 	}
 
 	return (

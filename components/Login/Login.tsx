@@ -3,11 +3,7 @@
 import { useContext, useEffect, useState } from 'react';
 import styles from './Login.module.scss';
 import { v4 as uuid } from 'uuid';
-
-type User = {
-	name: string,
-	id: string
-}
+import { User } from '../../common/hooks/useAllUsers';
 
 const Login = () => {
 
